@@ -1,0 +1,836 @@
+{
+	"info": {
+		"_postman_id": "45927fdf-3320-4250-bc5c-3f7f8b41a40c",
+		"name": "agencia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26890592"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "localhost:8080/agency/clients/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/clients/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"clients",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/clients/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/clients/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"clients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/clients/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Perez\",\r\n  \"dni\": \"12345678A\",\r\n  \"email\": \"juan@example.com\",\r\n  \"telefono\": \"123456789\"\r\n}\r\n{\r\n  \"nombre\": \"María\",\r\n  \"apellido\": \"González\",\r\n  \"dni\": \"98765432B\",\r\n  \"email\": \"maria@example.com\",\r\n  \"telefono\": \"987654321\"\r\n}\r\n{\r\n  \"nombre\": \"Carlos\",\r\n  \"apellido\": \"Martínez\",\r\n  \"dni\": \"54321678C\",\r\n  \"email\": \"carlos@example.com\",\r\n  \"telefono\": \"654987321\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/clients/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"clients",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/clients/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/clients/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"clients",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/clients/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Ana\",\r\n  \"apellido\": \"López\",\r\n  \"dni\": \"87654321D\",\r\n  \"email\": \"ana@example.com\",\r\n  \"telefono\": \"123456789\",\r\n  \"reservasHabitacion\": [],\r\n  \"reservasVuelo\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/clients/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"clients",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habitacion",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotels/rooms/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/rooms/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"rooms",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/rooms/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/rooms/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"rooms",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/rooms/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/rooms/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"rooms",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/rooms/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroHabitacion\": 101,\r\n  \"capacidad\": 2,\r\n  \"tipoHabitacion\": \"Doble\",\r\n  \"estado\": \"Disponible\",\r\n  \"precioDia\": 100.0,\r\n  \"descripcion\": \"Habitación doble estándar con vista al mar\",\r\n  \"disponibleDesde\": \"2024-06-01\",\r\n  \"disponibleHasta\": \"2024-06-15\",\r\n  \"hotel\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n{\r\n  \"numeroHabitacion\": 201,\r\n  \"capacidad\": 4,\r\n  \"tipoHabitacion\": \"Suite\",\r\n  \"estado\": \"Disponible\",\r\n  \"precioDia\": 200.0,\r\n  \"descripcion\": \"Suite familiar con jacuzzi\",\r\n  \"disponibleDesde\": \"2024-06-01\",\r\n  \"disponibleHasta\": \"2024-06-15\",\r\n  \"hotel\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n{\r\n  \"numeroHabitacion\": 301,\r\n  \"capacidad\": 1,\r\n  \"tipoHabitacion\": \"Individual\",\r\n  \"estado\": \"Disponible\",\r\n  \"precioDia\": 80.0,\r\n  \"descripcion\": \"Habitación individual con vista a la ciudad\",\r\n  \"disponibleDesde\": \"2024-06-01\",\r\n  \"disponibleHasta\": \"2024-06-15\",\r\n  \"hotel\": {\r\n    \"id\": 3\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/rooms/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"rooms",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/rooms/all",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroHabitacion\": 101,\r\n  \"capacidad\": 2,\r\n  \"tipoHabitacion\": \"Doble\",\r\n  \"estado\": \"Ocupada\",\r\n  \"precioDia\": 120.0,\r\n  \"descripcion\": \"Habitación doble estándar con vista al mar (actualizada)\",\r\n  \"disponibleDesde\": \"2024-06-10\",\r\n  \"disponibleHasta\": \"2024-06-20\",\r\n  \"hotel\": {\r\n    \"id\": 3\r\n  },\r\n  \"listaReservas\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/rooms/edit/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"rooms",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotels/new",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"codigo\": \"HOT003\",\r\n  \"nombre\": \"Grand Hyatt New York\",\r\n  \"pais\": \"Estados Unidos\",\r\n  \"ciudad\": \"Nueva York\",\r\n  \"email\": \"info@grandhyattnewyork.com\",\r\n  \"direccion\": \"109 East 42nd Street\",\r\n  \"numeroTelefono\": \"+1 212-883-1234\",\r\n  \"habitaciones\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/edit/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"HOT001\",\r\n  \"nombre\": \"Hilton Buenos Aires\",\r\n  \"pais\": \"Argentina\",\r\n  \"ciudad\": \"Buenos Aires\",\r\n  \"email\": \"info@hilton.com.ar\",\r\n  \"direccion\": \"Av. Macacha Güemes 351\",\r\n  \"numeroTelefono\": \"+54 11 4891-0000\",\r\n  \"habitaciones\": [],\r\n  \"borrado\": false\r\n}\r\n{\r\n  \"codigo\": \"HOT002\",\r\n  \"nombre\": \"Hotel Ritz Madrid\",\r\n  \"pais\": \"España\",\r\n  \"ciudad\": \"Madrid\",\r\n  \"email\": \"info@ritzmadrid.com\",\r\n  \"direccion\": \"Plaza de la Lealtad, 5\",\r\n  \"numeroTelefono\": \"+34 915 21 87 57\",\r\n  \"habitaciones\": [],\r\n  \"borrado\": false\r\n}\r\n{\r\n  \"codigo\": \"HOT003\",\r\n  \"nombre\": \"The Plaza Hotel\",\r\n  \"pais\": \"Estados Unidos\",\r\n  \"ciudad\": \"Nueva York\",\r\n  \"email\": \"info@theplazahotel.com\",\r\n  \"direccion\": \"Fifth Avenue at Central Park South\",\r\n  \"numeroTelefono\": \"+1 212-759-3000\",\r\n  \"habitaciones\": [],\r\n  \"borrado\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotels/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotels/available-rooms?disponibleDesde=2024-06-01&disponibleHasta=2024-06-15&pais=Estados Unidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotels/available-rooms?disponibleDesde=2024-06-01&disponibleHasta=2024-06-15&pais=Estados Unidos",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotels",
+								"available-rooms"
+							],
+							"query": [
+								{
+									"key": "disponibleDesde",
+									"value": "2024-06-01"
+								},
+								{
+									"key": "disponibleHasta",
+									"value": "2024-06-15"
+								},
+								{
+									"key": "pais",
+									"value": "Estados Unidos"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vuelo",
+			"item": [
+				{
+					"name": "localhost:8080/agency/flights/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/delete/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/edit/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"AV456\",\r\n  \"tipoAsiento\": 2,\r\n  \"cantidadAsientos\": 180,\r\n  \"origen\": \"Guadalajara\",\r\n  \"destino\": \"Bogotá\",\r\n  \"fechaPartida\": \"2024-07-20\",\r\n  \"fechaLlegada\": \"2024-07-21\",\r\n  \"millas\": 3800.0,\r\n  \"esDirecto\": \"No\",\r\n  \"aerolinea\": \"Avianca\",\r\n  \"listaReservas\": []\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flights/edit/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"edit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codigo\": \"AM001\",\r\n  \"tipoAsiento\": 1,\r\n  \"cantidadAsientos\": 150,\r\n  \"origen\": \"Ciudad de México\",\r\n  \"destino\": \"Madrid\",\r\n  \"fechaPartida\": \"2024-07-10\",\r\n  \"fechaLlegada\": \"2024-07-11\",\r\n  \"millas\": 4800.0,\r\n  \"esDirecto\": \"Sí\",\r\n  \"aerolinea\": \"Aeroméxico\",\r\n  \"precio\": 550.0,\r\n  \"listaReservas\": []\r\n}\r\n{\r\n  \"codigo\": \"IB123\",\r\n  \"tipoAsiento\": 2,\r\n  \"cantidadAsientos\": 200,\r\n  \"origen\": \"Londres\",\r\n  \"destino\": \"Nueva York\",\r\n  \"fechaPartida\": \"2024-08-20\",\r\n  \"fechaLlegada\": \"2024-08-21\",\r\n  \"millas\": 3500.0,\r\n  \"esDirecto\": \"No\",\r\n  \"aerolinea\": \"Iberia\",\r\n  \"precio\": 700.0,\r\n  \"listaReservas\": []\r\n}\r\n{\r\n  \"codigo\": \"DL456\",\r\n  \"tipoAsiento\": 3,\r\n  \"cantidadAsientos\": 180,\r\n  \"origen\": \"Los Ángeles\",\r\n  \"destino\": \"Tokio\",\r\n  \"fechaPartida\": \"2024-09-15\",\r\n  \"fechaLlegada\": \"2024-09-16\",\r\n  \"millas\": 9000.0,\r\n  \"esDirecto\": \"Sí\",\r\n  \"aerolinea\": \"Delta Airlines\",\r\n  \"precio\": 950.0,\r\n  \"listaReservas\": []\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flights/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/flights/filter?origen=Guadalajara&destino=Bogotá&fechaSalida=2024-07-20&fechaLlegada=2024-07-21",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flights/filter?origen=Guadalajara&destino=Bogotá&fechaSalida=2024-07-20&fechaLlegada=2024-07-21",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flights",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "origen",
+									"value": "Guadalajara"
+								},
+								{
+									"key": "destino",
+									"value": "Bogotá"
+								},
+								{
+									"key": "fechaSalida",
+									"value": "2024-07-20"
+								},
+								{
+									"key": "fechaLlegada",
+									"value": "2024-07-21"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReservaVuelo",
+			"item": [
+				{
+					"name": "localhost:8080agency/flight-booking/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/delete/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080agency/flight-booking/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080agency/flight-booking/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080agency/flight-booking/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"estado\": \"Confirmada\",\r\n  \"fechaReserva\": \"2024-01-15\",\r\n  \"precioTotal\": 1200.0,\r\n  \"vuelo\": {\r\n    \"id\": 2\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 3\r\n  }\r\n}\r\n{\r\n  \"estado\": \"Pendiente\",\r\n  \"fechaReserva\": \"2024-01-20\",\r\n  \"precioTotal\": 1350.0,\r\n  \"vuelo\": {\r\n    \"id\": 2\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n{\r\n  \"estado\": \"Cancelada\",\r\n  \"fechaReserva\": \"2024-03-25\",\r\n\r\n  \"precioTotal\": 1000.0,\r\n  \"vuelo\": {\r\n    \"id\": 3\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 3\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080agency/flight-booking/edit/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"estado\": \"Confirmada\",\r\n    \"fechaReserva\": \"2024-01-15\",\r\n    \"precioTotal\": 1200.0,\r\n    \"vuelo\": {\r\n        \"id\": 3\r\n    },\r\n    \"cliente\": {\r\n        \"id\": 2\r\n    },\r\n    \"borrado\": false\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/flight-booking/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"flight-booking",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReservaHabitacion",
+			"item": [
+				{
+					"name": "localhost:8080/agency/hotel-booking/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/delete/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/new",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"estado\": \"Confirmada\",\r\n  \"fechaReserva\": \"2024-01-1\",\r\n  \"precioTotal\": 500.0,\r\n  \"habitacion\": {\r\n    \"id\": 3\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n{\r\n  \"estado\": \"Pendiente\",\r\n  \"fechaReserva\": \"2024-09-20\",\r\n  \"precioTotal\": 700.0,\r\n  \"habitacion\": {\r\n    \"id\": 2\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n{\r\n  \"estado\": \"Confirmada\",\r\n  \"fechaReserva\": \"2024-11-03\",\r\n  \"precioTotal\": 900.0,\r\n  \"habitacion\": {\r\n    \"id\": 3\r\n  },\r\n  \"cliente\": {\r\n    \"id\": 3\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/agency/hotel-booking/edit/2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"estado\": \"Confirmada\",\r\n  \"fechaReserva\": \"2024-08-15\",\r\n  \"precioTotal\": 500.0,\r\n  \"cliente\": {\r\n    \"id\": 1\r\n  },\r\n  \"habitacion\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/agency/hotel-booking/edit/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agency",
+								"hotel-booking",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
